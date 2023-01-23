@@ -276,6 +276,34 @@ if (condition) {
   foreach ($associativeArray as $key => $value) {
     echo "$key - $value <br>";
   }
+
+
+  //FUNCTIONS 
+  //Same in JS FUNCTIONS
+  echo "<br>";
+  echo "<br>";
+  function attack()
+  {
+    echo 'Attack Registered';
+  }
+
+  attack();
+
+  echo "<br>";
+  function heal($healAmount = 2)
+  {
+    return $healAmount;
+  }
+
+  $player1heal = heal();
+  echo "Healed for $player1heal";
+
+  //Arrow Functions
+  // Arrow functions are treated as a single liner. 
+  echo "<br>";
+  $arrow = fn ($tip) => "This arrow has a $tip tip";
+
+  echo $arrow('metal')
   ?>
 </body>
 

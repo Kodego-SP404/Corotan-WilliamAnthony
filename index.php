@@ -34,17 +34,26 @@
 - Variables can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ )
 - Variables are case-sensitive ($name and $NAME are two different variables)
 */
+
   $fname = 'William';
   $age = 22;
   $hasKids = false;
   $cashOnHand = 1.50;
+  $hate = 'I HATE DOLLAR SIGNS AND SEMI-COLONS';
+
   // string interpolated
+  echo $hate;
+  echo "<br>";
+  echo "<br>";
+
+
   echo "Hi! I'm $fname, $age of age. Has $cashOnHand cash on hand";
   echo "<br>";
+
   // dot operator / concatenate
   echo "Hi! I'm " . $fname . ', ' . $age . ' of age. Has ' . $cashOnHand .  ' cash on hand';
 
-  // Arithmetic Operations
+  // 02. ARITHMETIC OPERATIONS
   // ADDITION - all will be added. 
   $add = 1 + 2;
   $add2 = '1' + '2';
@@ -85,6 +94,72 @@
   echo "<br>";
   echo CONSTANT_NAME;
   echo "<br>";
+
+  // 03. ARRAYS
+  //Same declaration in JS
+  $array = ['el-1', 'el-2', 'el-3', 'el-4'];
+  $fruits = ['apple', 'banana', 'calamansi', 'durian'];
+
+  echo $array[1] . $array[2];
+  echo "<br>";
+  echo $fruits[2];
+  echo "<br>";
+
+  // Associative Arrys
+  //Basically JS OBJECTS in square brackets
+  $associativeArray = [
+    1 => 'el-1',
+    2 => 'el-2',
+    3 => 'el-3',
+    4 => 'el-4'
+  ];
+  //Key-vaLue pairing using string as key
+  $associativeArrayString = [
+    'first' => 'el-1',
+    'second' => 'el-2',
+    'third' => 'el-3',
+    'fourth' => 'el-4',
+  ];
+  echo $associativeArray[1];
+  echo "<br>";
+  echo $associativeArrayString['second'];
+
+  //Multidimentional Arrays
+  $characters = [
+    [
+      'userName' => 'Sol',
+      'class' => 'Warrior',
+      'skills' => [
+        1 => 'Heavy Slash',
+        2 => 'Headbutt',
+        3 => 'Shield Thrust',
+        4 => 'Holy Strike',
+      ]
+    ],
+    [
+      'userName' => 'Luna',
+      'class' => 'Mage',
+      'skills' => [
+        1 => 'Fireball',
+        2 => 'Lightning Bolt',
+        3 => 'Ice Spear',
+        4 => 'Rock Bullets',
+      ]
+    ]
+  ];
+  echo "<br>";
+  echo 'user: ' . $characters[0]['userName'];
+
+  //ENCODE AND DECODE TO JSON
+  //Encode
+  echo "<br>";
+  echo json_encode($characters);
+
+  //Decode
+  $jsonObj = '{"userName":"Sol","class":"Warrior","skills":{"1":"Heavy Slash","2":"Headbutt","3":"Shield Thrust","4":"Holy Strike"}}';
+  echo "<br>";
+  echo "<br>";
+  var_dump(json_decode($jsonObj));
   ?>
 </body>
 

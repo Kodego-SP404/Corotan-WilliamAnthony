@@ -148,6 +148,7 @@
     ]
   ];
   echo "<br>";
+  echo "<br>";
   echo 'user: ' . $characters[0]['userName'];
 
   //ENCODE AND DECODE TO JSON
@@ -160,6 +161,80 @@
   echo "<br>";
   echo "<br>";
   var_dump(json_decode($jsonObj));
+  echo "<br>";
+  echo "<br>";
+  echo "<br>";
+  echo "<br>";
+  //CONDITIONALS 
+
+  /* ---- Conditionals & Operators ---- */
+
+  /* ------------ Operators ----------- */
+
+  /*
+  < Less than
+  > Greater than
+  <= Less than or equal to
+  >= Greater than or equal to
+  == Equal to
+  === Identical to
+  != Not equal to
+  !== Not identical to
+*/
+
+  /* ---------- If & If-Else Statements --------- */
+
+  /*
+** If Statement Syntax
+if (condition) {
+   code to be executed if condition is true
+}
+*/
+
+  date_default_timezone_set('Asia/Manila'); //setting defaultTimeZone to PST
+
+  $t = date('H');
+
+
+  if ($t >= 1 && $t <= 12) {
+    echo 'Good Morning';
+  } elseif ($t >= 13 && $t <= 17) {
+    echo 'Good Afternoon';
+  } elseif ($t >= 18) {
+    echo 'Good Evening';
+  }
+
+  //Truety Value same in JS
+  $inventory = ['Sword of Eternity'];
+  echo "<br>";
+  echo "<br>";
+  if (!empty($inventory)) {
+    echo 'Inventory is not empty';
+  } else {
+    echo 'Inventory is empty.';
+  }
+
+  //Ternary Operator
+  $ternaryStorage = (!empty($inventory)) ?  'Inventory is not empty' : 'Inventory is empty.';
+  echo "<br>";
+  echo $ternaryStorage;
+
+  $colors = 'blue';
+  echo "<br>";
+
+  switch ($colors) {
+    case 'red':
+      echo 'red';
+      break;
+    case 'green':
+      echo 'green';
+      break;
+    case 'blue':
+      echo 'blue';
+      break;
+    default:
+      echo 'none of the above';
+  }
   ?>
 </body>
 

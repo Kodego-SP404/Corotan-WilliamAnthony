@@ -235,6 +235,47 @@ if (condition) {
     default:
       echo 'none of the above';
   }
+
+  //LOOPS 
+  //Same as JS
+  //For loops
+  echo "<br>";
+  echo "<br>";
+  for ($x = 0; $x <= 10; $x++) {
+    if ($x % 2 == 0) {
+      echo "Number: $x <br>";
+    }
+  }
+
+  //While Loops
+  echo "<br>";
+  echo "<br>";
+  $ekis = 1;
+  while ($ekis <= 10) {
+    echo "Number: $ekis <br>";
+    $ekis++;
+  }
+
+  //Do-While Loops
+  do {
+    echo "Number: $ekis <br>";
+    $ekis--;
+  } while ($ekis >= 0);
+
+  //Foreach Loops
+  echo "<br>";
+  echo "<br>";
+
+  //Simp[le Array]
+  $posts = ['First Post', 'Second Post', 'Third Post'];
+  foreach ($posts as $post) {
+    echo "$post <br>";
+  }
+
+  //Associative Array
+  foreach ($associativeArray as $key => $value) {
+    echo "$key - $value <br>";
+  }
   ?>
 </body>
 

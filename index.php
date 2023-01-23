@@ -9,8 +9,9 @@
 </head>
 
 <body>
-
   <?php
+  // echo 'hello hi test test234';
+
   /* ----- Variables & Data Types ----- */
 
   /* --------- PHP Data Types --------- */
@@ -33,10 +34,57 @@
 - Variables can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ )
 - Variables are case-sensitive ($name and $NAME are two different variables)
 */
+  $fname = 'William';
+  $age = 22;
+  $hasKids = false;
+  $cashOnHand = 1.50;
+  // string interpolated
+  echo "Hi! I'm $fname, $age of age. Has $cashOnHand cash on hand";
+  echo "<br>";
+  // dot operator / concatenate
+  echo "Hi! I'm " . $fname . ', ' . $age . ' of age. Has ' . $cashOnHand .  ' cash on hand';
+
+  // Arithmetic Operations
+  // ADDITION - all will be added. 
+  $add = 1 + 2;
+  $add2 = '1' + '2';
+  $add3 = 1 + '2';
+
+  echo "<br>";
+  echo $add;
+  echo "<br>";
+  echo $add2;
+  echo "<br>";
+  echo $add3;
+  echo "<br>";
+
+  //SUBTRACTION
+  $subtract = 2 - 1;
+
+  echo "<br>";
+  echo $subtract;
+  echo "<br>";
+
+  //MULTIPLICATION
+  $subtract = 2 * 1;
+
+  echo "<br>";
+  echo $subtract;
+  echo "<br>";
+
+  //DIVISION
+  $subtract = 4 / 2;
+
+  echo "<br>";
+  echo $subtract;
+  echo "<br>";
 
 
-
-  echo 'hello hi test test234';
+  //CONTANTS
+  define("CONSTANT_NAME", "Value");
+  echo "<br>";
+  echo CONSTANT_NAME;
+  echo "<br>";
   ?>
 </body>
 

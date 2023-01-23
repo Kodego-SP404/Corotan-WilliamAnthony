@@ -303,7 +303,19 @@ if (condition) {
   echo "<br>";
   $arrow = fn ($tip) => "This arrow has a $tip tip";
 
-  echo $arrow('metal')
+  echo $arrow('metal');
+
+  //Array Functions/Methods
+  //Documentation: https://www.php.net/manual/en/ref.array.php
+  echo "<br>";
+  echo "<br>";
+  $classes = ['Warrior', 'Mage', 'Archer', 'Priest'];
+
+  //getting length of an array using count()
+  echo count($classes);
+
+
+
   ?>
 </body>
 

@@ -14,18 +14,23 @@
         $select->execute();
 
         $result = $select->fetchAll();
-        //resultArray = [1,2,3]
-        foreach ($result as $data) {
-          echo "
-            <div class=\"card my-3 container \">
-            <div class=\"card-body text-center \">
-            <blockquote class=\"blockquote mb-0\">
-              <p> " . $data['body'] . " </p>
-              <footer class=\"blockquote-footer\">" . $data['username'] . " " . $data['date'] . "</footer>
-            </blockquote>  
-            </div>
-            </div>
-            ";
+
+        if (!empty($result)) {
+          //resultArray = [1,2,3]
+          foreach ($result as $data) {
+            echo "
+    <div class=\"card my-3 w-75 container \">
+    <div class=\"card-body text-center \">
+    <blockquote class=\"blockquote mb-0\">
+      <p> " . $data['body'] . " </p>
+      <footer class=\"blockquote-footer\">" . $data['username'] . " " . $data['date'] . "</footer>
+    </blockquote>  
+    </div>
+    </div>
+    ";
+          }
+        } else {
+          echo '<h6 class="my-5">There is no feedback!</h6>';
         }
       } catch (PDOException $e) {
         echo "Error: " . $e->getMessage();

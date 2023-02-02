@@ -1,6 +1,6 @@
 
 
-<div x-show='deleteModalOpen' class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+<div x-show='deleteModalOpen' class="relative z-20" aria-labelledby="modal-title" role="dialog" aria-modal="true">
   <!--
     Background backdrop, show/hide based on modal state.
 

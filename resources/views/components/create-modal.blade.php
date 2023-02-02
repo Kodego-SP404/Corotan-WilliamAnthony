@@ -1,4 +1,4 @@
-<div x-show='editModalOpen' class="relative z-20 " aria-modal="true">
+<div x-show='createModalOpen' class="relative z-20 " aria-modal="true">
   <!--
     Background backdrop, show/hide based on modal state.
 
@@ -9,10 +9,10 @@
       From: "opacity-100"
       To: "opacity-0"
   -->
-  <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
+  <div class="fixed inset-0 bg-gray-500 bg-opacity-50 transition-opacity"></div>
 
   <div class="fixed inset-0 z-10 overflow-y-auto">
-    <div   class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+    <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
       <!--
         Modal panel, show/hide based on modal state.
 
@@ -27,15 +27,12 @@
         <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
           <div class="sm:flex sm:items-start">
             <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
-              <h3 class="text-lg font-medium leading-6 text-gray-900" id="modal-title">Update Student Information</h3>
+              <h3 class="text-lg font-medium leading-6 text-gray-900" id="modal-title">Add Student Information</h3>
 
               {{-- FORM START --}}
               <div class="block p-6 rounded-lg bg-white max-w-md">
-                <form action="/student/{{$student->id}}" 
-                method="POST">
-                  @method('put')
+                <form action="/add/student" method="POST">
                   @csrf
-                  <p>Student ID: {{ $student->id }}</p>
                   <div class="grid grid-cols-2 gap-4">
                     {{-- FIRSTNAME --}}
                     <div class="form-group mb-6">
@@ -55,7 +52,7 @@
                         ease-in-out
                         mt-1
                         focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="first_name" name="first_name" required
-                         value="{{ $student->first_name }}">
+                         placeholder="Juan">
                     </div>
                     {{-- LASTNAME --}}
                     <div class="form-group mb-6">
@@ -75,7 +72,7 @@
                         ease-in-out
                         mt-1
                         focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="last_name" name="last_name" required
-                         value="{{ $student->last_name }}">
+                         placeholder="Dela Cruz">
                     </div>
                   </div>
 
@@ -98,7 +95,7 @@
                         ease-in-out
                         mt-1
                         focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="age" name="age" required
-                        value="{{ $student->age }}">
+                        >
                     </div>
                     {{-- Gender --}}
                     <div class="form-group mb-6 col-span-9">
@@ -118,8 +115,8 @@
                       ease-in-out
                       mt-1
                       focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" required>  
-                      <option value="Male"  {{$student->gender == "Male" ? 'selected' : ''}}>Male</option>
-                      <option value="Female"  {{$student->gender == "Female" ? 'selected' : ''}}>Female</option>
+                      <option value="Male">Male</option>
+                      <option value="Female">Female</option>
                       </select>
                     </div>
                   </div>
@@ -140,14 +137,14 @@
                       ease-in-out
                       mt-1
                       focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="email" name="email" required
-                      value="{{ $student->email }}">
+                      placeholder="juandelacruz@email.com">
                   </div>
                     <div class="bg-gray-50 pl-4 py-3 sm:flex sm:flex-row-reverse sm:pl-6">
                      
                       
 
-                    <button @click='editModalOpen = !editModalOpen' type="button" class="mt-3 inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">Cancel</button>
-                    <button type="submit" class="inline-flex w-full justify-center rounded-md border border-transparent bg-blue-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm">Update</button>
+                    <button @click='createModalOpen = !createModalOpen' type="button" class="mt-3 inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">Cancel</button>
+                    <button type="submit" class="inline-flex w-full justify-center rounded-md border border-transparent bg-blue-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm">Add</button>
                   </div>
                 </form>
               </div>

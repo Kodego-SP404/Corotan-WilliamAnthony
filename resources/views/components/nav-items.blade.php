@@ -1,4 +1,4 @@
-<ul class="flex flex-col p-4 mt-4  bg-white md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 ">
+<ul class="flex flex-col py-2  bg-white md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 ">
 
  @auth
 

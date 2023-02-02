@@ -1,6 +1,8 @@
-  <nav x-data="{ open: false }" class="bg-white px-2 sm:px-4 py-2.5 sticky w-full z-20 top-0 left-0 border-b border-gray-200 shadow-violet-300 shadow-lg">
+  <nav x-data="{ open: false }" class="bg-white px-2 sm:px-4  sticky w-full z-20 top-0 left-0 border-b border-gray-200 shadow-violet-300 shadow-lg">
   <div class="container flex flex-wrap items-center justify-between mx-auto">
       <span class="self-center text-2xl font-normal whitespace-nowrap">Student System</span>
+
+
 
       <button @click="open = !open"  data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-sticky" aria-expanded="false">
         <span class="sr-only">Open main menu</span>
